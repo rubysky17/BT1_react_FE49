@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./BaiTapThucHanhLayout/Header";
+import Sidebar from "./BaiTapThucHanhLayout/Sidebar";
+import Content from "./BaiTapThucHanhLayout/Content";
+import Footer from "./BaiTapThucHanhLayout/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="container">
+        <div className="row">
+          <div className="col-3">
+            <Sidebar />
+          </div>
+          <div className="col-9">
+            <Content />
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
